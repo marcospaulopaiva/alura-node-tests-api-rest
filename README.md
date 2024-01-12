@@ -27,7 +27,7 @@ alt="#" width="150" height="150">
 <p align="left">
   <strong>Aulas:</strong> </br> 
 
-- Boas práticas com testes unitários Ver primeiro vídeo - 16min
+- Boas práticas com testes unitários - 16min
 - Testes de integração - 15min
 - Testes E2E - 16min
 - Testando outras funcionalidades - 21min

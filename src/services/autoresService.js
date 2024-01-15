@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable class-methods-use-this */
 import Autor from '../models/autor.js';
 
 class AutoresService {

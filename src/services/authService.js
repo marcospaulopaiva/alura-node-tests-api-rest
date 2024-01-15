@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable class-methods-use-this */
 import bcryptjs from 'bcryptjs';
 import jsonwebtoken from 'jsonwebtoken';
 import Usuario from '../models/usuario.js';
@@ -33,7 +35,7 @@ class AuthService {
         expiresIn: 86400,
       });
 
-      return { message: 'Usuario conectado', accessToken };
+      return { message: 'Usuário conectado', accessToken };
     } catch (err) {
       throw new Error(err.message);
     }

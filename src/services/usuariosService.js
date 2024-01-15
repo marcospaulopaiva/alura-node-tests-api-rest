@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable class-methods-use-this */
 import bcryptjs from 'bcryptjs';
 import Usuario from '../models/usuario.js';
 

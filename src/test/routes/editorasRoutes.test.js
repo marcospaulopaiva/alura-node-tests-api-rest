@@ -1,6 +1,8 @@
+/* eslint-disable import/extensions */
+/* eslint-disable no-undef */
 import request from 'supertest';
 import {
-  describe, expect, it, jest,
+  describe, expect, it, jest, test,
 } from '@jest/globals';
 import app from '../../app.js';
 

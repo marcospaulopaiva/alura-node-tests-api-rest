@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable class-methods-use-this */
 import LivroImagem from '../models/livro_imagem.js';
 
 class LivrosImagensService {
@@ -9,7 +11,7 @@ class LivrosImagensService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async listarImagemPorId(id) {
     try {
@@ -19,11 +21,11 @@ class LivrosImagensService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async cadastrarImagem(req) {
     try {
-      const buffer = req.file.buffer;
+      const { buffer } = req.file;
       const base64Image = buffer.toString('base64');
 
       const data = {
@@ -41,7 +43,7 @@ class LivrosImagensService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async atualizarImagem(id, body) {
     try {
@@ -53,17 +55,17 @@ class LivrosImagensService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async excluirImagemLivro(id) {
     try {
       await LivroImagem.excluir(id);
-      
+
       return { message: 'imagem excluído' };
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 }
 
 export default LivrosImagensService;

@@ -21,6 +21,7 @@ export default async (req, res, next) => {
 
     return next();
   } catch (error) {
-    res.status(401).send('Usuario não autorizado');
+    res.status(401).send(`Usuario não autorizado==${token}`);
+    // res.status(401).send('Usuario não autorizado');
   }
 };

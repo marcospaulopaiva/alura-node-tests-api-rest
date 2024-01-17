@@ -177,6 +177,16 @@
 				{
 					"name": "Buscando Todos - Autores",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtcEBtcC5jb20uYnIiLCJpYXQiOjE3MDU1MDQzMzEsImV4cCI6MTcwNTU5MDczMX0.4aAAqVR6d3rllEczK0F-9eM-YpHLMxPH7O6LDwIeL98",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -490,6 +500,16 @@
 				{
 					"name": "Buscando Todos - Usuários",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtcEBtcC5jb20uYnIiLCJpYXQiOjE3MDUzMjk3NTAsImV4cCI6MTcwNTQxNjE1MH0.zzZq9QLWPeW1Cosok-SHkDdmkopeoYZGBIgrcKJRkfY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -518,7 +538,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n     \"nome\":\"Marcos Paulo\",\n     \"email\":\"mp@mp.com.br\",\n     \"senha\":\"senha123\"\n}",
+					"raw": "{\n     \"nome\":\"Marcos Paulo\",\n     \"email\":\"mp2@mp.com.br\",\n     \"senha\":\"senha123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

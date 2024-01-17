@@ -19,34 +19,29 @@ describe('Testando a authService.cadastrarUsuario', () => {
   });
 
   it('A senha do usuário precisa ser criptografada quando for salva no banco de dados', async () => {
-    // ARRANGE
     const data = {
       nome: 'Marcos Paulo',
       email: 'marcospaulo@teste.com.br',
       senha: 'senha123',
     };
-    // ACT
+
     const resultado = await authService.cadastrarUsuario(data);
     const senhaIguais = await bcryptjs.compare('senha123', resultado.content.senha);
 
-    // ASSERT
     expect(senhaIguais).toStrictEqual(true);
 
     await Usuario.excluir(resultado.content.id);
   });
 
   it('Não pode ser cadastrado um usuário com e-mail duplicado', async () => {
-    // ARRANGE
     const usuarioMock = {
       nome: 'Marcos Paulo',
       email: 'mp@mp.com.br',
       senha: 'senha123',
     };
 
-    // ACT
     const usuarioSave = authService.cadastrarUsuario(usuarioMock);
 
-    // ASSERT
     await expect(usuarioSave).rejects.toThrowError('O email já esta cadastrado!');
   });
 

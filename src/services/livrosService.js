@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable class-methods-use-this */
 import Livro from '../models/livro.js';
 
 class LivrosService {
@@ -9,7 +11,7 @@ class LivrosService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async listarLivroPorId(id) {
     try {
@@ -19,7 +21,7 @@ class LivrosService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async cadastrarLivro(body) {
     try {
@@ -30,7 +32,7 @@ class LivrosService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async atualizarLivro(id, body) {
     try {
@@ -42,7 +44,7 @@ class LivrosService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 
   async excluirLivro(id) {
     try {
@@ -51,7 +53,7 @@ class LivrosService {
     } catch (err) {
       throw new Error(err.message);
     }
-  };
+  }
 }
 
 export default LivrosService;

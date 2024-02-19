@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import knex from 'knex';
 import path from 'path';
 import { fileURLToPath } from 'url';

@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable class-methods-use-this */
 import nodeMailer from '../config/nodeMailer.js';
 import AluguelLivro from '../models/aluguel_livro.js';
 import Livro from '../models/livro.js';
@@ -82,10 +84,27 @@ class AluguelLivroService {
     }
   }
 
-  async excluirAluguelLivroLivro(id) {
+  async excluirAluguelLivro(id) {
     try {
       await AluguelLivro.excluir(id);
       return { message: 'Registro de Aluguel de Livro excluído' };
+    } catch (err) {
+      throw new Error(err.message);
+    }
+  }
+
+  async calcularDataDevolucao(dataAlugado, numeroDiasAlugados) {
+    try {
+      if (numeroDiasAlugados < 1) {
+        throw new Error('Número de dias alugados tem que ser maior do que 0!');
+      }
+      if (dataAlugado == null) {
+        throw new Error('A data em que o livro foi alugado não pode ser nula!');
+      }
+      const dataDevolucao = new Date(dataAlugado.setDate(dataAlugado.getDate()));
+      dataDevolucao.setDate(dataDevolucao.getDate() + numeroDiasAlugados);
+
+      return dataDevolucao;
     } catch (err) {
       throw new Error(err.message);
     }

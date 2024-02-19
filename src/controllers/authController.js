@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import AuthService from '../services/authService.js';
 
 const authService = new AuthService();
@@ -16,7 +17,7 @@ class AuthController {
 
   static cadastrarUsuario = async (req, res) => {
     const { body } = req;
-    
+
     try {
       const usuario = await authService.cadastrarUsuario(body);
 
